@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Satellite Image Detection</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-links">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('predict') }}">Prediction</a>
+    <a href="{{ url_for('about') }}">About</a>
+    <a href="{{ url_for('contact') }}">Contact Us</a>
+   </div>
+  </div>
+  <div class="hero">
+  <!-- Background Video -->
+  <video autoplay muted loop class="video-bg" width="640" height="360 "control>
+    <source src="{{ url_for('static', filename='videos/bg.mp4') }}" type="video/mp4">
+  </video>
+  <!-- Text Content -->
+  <div class="content">
+    <h1>Welcome to Satellite Image Detection</h1>
+    <p>Transforming satellite data into smart decisions.</p>
+    <br><br>
+  </div>
+</body>
+</html>

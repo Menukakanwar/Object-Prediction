@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#041823] min-h-screen flex items-center justify-center p-4">
+  <div
+    class="flex max-w-md w-full rounded-lg shadow-lg"
+    style="box-shadow: 0 0 15px #0ff;">
+    <!-- Left side -->
+    <div
+      class="relative flex flex-col justify-center bg-[#041823] p-8 w-1/2"
+      style="box-shadow: inset 0 0 10px #0ff;">
+      <h2 class="text-white font-bold text-xl mb-6">Login</h2>
+      <form action="/login" method="POST" class="space-y-4">
+        <div>
+          <label for="username" class="block text-xs text-[#0ff] mb-1">Email address</label>
+          <div class="flex items-center border-b border-gray-400">
+            <input id="username" type="email" name="email"
+              class="bg-transparent text-white placeholder-[#0ff] focus:outline-none w-full py-1"
+              placeholder="Enter email address" required/>
+            <i class="fas fa-user text-[#0ff] ml-2"></i>
+          </div>
+        </div>
+        <div>
+          <label
+            for="password"
+            class="block text-xs text-[#0ff] mb-1"
+            >Password</label
+          >
+          <div class="flex items-center border-b border-gray-400">
+            <input
+              id="password" name="password"
+              type="password"
+              class="bg-transparent text-white placeholder-[#0ff] focus:outline-none w-full py-1"
+              placeholder="Enter password" required
+            />
+            <i class="fas fa-lock text-[#0ff] ml-2"></i>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-gradient-to-r from-cyan-400 to-cyan-600 text-white rounded-full py-2 mt-4 text-sm font-semibold hover:brightness-110 transition"
+        >
+          Login
+        </button>
+              <p class="text-xs text-white mt-4">
+        Don’t have an account?
+        <a href="#" class="text-cyan-400 font-semibold hover:underline"
+          >Sign UP</a
+        >
+      </p>
+          {% if error %}<p class="text-danger mt-2">{{ error }}</p>{% endif %}
+          {% if message %}<p class="text-success mt-2">{{ message }}</p>{% endif %}
+      </form>
+
+    </div>
+
+    <!-- Right side -->
+    <div
+      class="relative w-1/2 bg-gradient-to-r from-cyan-600 to-cyan-400 text-white p-8 flex flex-col justify-center"
+      style="box-shadow: inset 0 0 15px #0ff;">
+      <h3 class="font-bold text-2xl mb-2">WELCOME BACK!</h3>
+      <p class="text-xs leading-tight max-w-[180px]">
+        Object Detection from Satellite Images
+      </p>
+    </div>
+  </div>
+</body>
+</html>
