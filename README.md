@@ -38,7 +38,7 @@ To automate the analysis of satellite imagery using deep learning and provide us
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/satellite-object-detection.git
+   git clone https://github.com/Menukakanwar/Object-Prediction.git
    cd satellite-object-detection
 
 
